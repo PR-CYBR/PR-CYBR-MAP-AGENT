@@ -26,9 +26,9 @@ jobs:
       - name: Build production container
         run: |
           if [ -f Dockerfile ]; then
-            docker build -t prcyber-map-agent:production .
-            docker tag prcyber-map-agent:production prcyber-map-agent:production-${{ github.sha }}
-            docker tag prcyber-map-agent:production prcyber-map-agent:latest
+            docker build -t pr-cybr-map-agent:production .
+            docker tag pr-cybr-map-agent:production pr-cybr-map-agent:production-${{ github.sha }}
+            docker tag pr-cybr-map-agent:production pr-cybr-map-agent:latest
           else
             echo "No Dockerfile found"
           fi
@@ -36,7 +36,7 @@ jobs:
       - name: Production deployment placeholder
         run: |
           echo "Deploying to production environment..."
-          echo "Container: prcyber-map-agent:production-${{ github.sha }}"
+          echo "Container: pr-cybr-map-agent:production-${{ github.sha }}"
           echo "This would typically:"
           echo "  1. Push to production container registry"
           echo "  2. Update production Kubernetes/ECS deployment"

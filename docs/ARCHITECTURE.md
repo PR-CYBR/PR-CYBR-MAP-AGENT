@@ -1,8 +1,8 @@
-# PR-CYBR Map Agent Architecture
+# PR-CYBR-MAP-AGENT (A-15) Architecture
 
 ## Overview
 
-The PR-CYBR Map Agent is an autonomous system built on the Spec-Kit framework that manages cyber threat visualization and orchestrates a multi-stage CI/CD pipeline. The system follows spec-driven development principles where specifications are the source of truth for all functionality.
+The PR-CYBR-MAP-AGENT (A-15) is an autonomous system built on the Spec-Kit framework that manages cyber threat visualization and orchestrates a multi-stage CI/CD pipeline. The system follows spec-driven development principles where specifications are the source of truth for all functionality.
 
 ## System Architecture
 

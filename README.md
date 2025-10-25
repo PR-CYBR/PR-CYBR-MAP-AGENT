@@ -1,10 +1,10 @@
-# PR-CYBR Map Agent
+# PR-CYBR-MAP-AGENT (A-15)
 
 Autonomous agent to update and manage the PR-CYBR Map, orchestrating dynamic cyber threat data visualization and CI/CD pipelines across dev→qa→staging→prod branches using Spec-Kit.
 
 ## Overview
 
-The PR-CYBR Map Agent is a spec-driven autonomous system that manages cyber threat visualization and orchestrates a complete CI/CD pipeline. Built on the Spec-Kit framework, it enables self-updating functionality while maintaining human editability and oversight.
+The PR-CYBR-MAP-AGENT (A-15) is a spec-driven autonomous system that manages cyber threat visualization and orchestrates a complete CI/CD pipeline. Built on the Spec-Kit framework, it enables self-updating functionality while maintaining human editability and oversight.
 
 ## Features
 
@@ -27,8 +27,8 @@ The PR-CYBR Map Agent is a spec-driven autonomous system that manages cyber thre
 
 ```bash
 # Clone the repository
-git clone https://github.com/PR-CYBR/PRCyberMapAgent.git
-cd PRCyberMapAgent
+git clone https://github.com/PR-CYBR/PR-CYBR-MAP-AGENT.git
+cd PR-CYBR-MAP-AGENT
 
 # Install dependencies
 npm install
@@ -170,19 +170,19 @@ node src/agent/index.js --once
 ### Build Container
 
 ```bash
-docker build -t prcyber-map-agent .
+docker build -t pr-cybr-map-agent .
 ```
 
 ### Run Container
 
 ```bash
-docker run -d --name map-agent prcyber-map-agent
+docker run -d --name map-agent pr-cybr-map-agent
 ```
 
 ### Test Container
 
 ```bash
-docker run --rm prcyber-map-agent --version
+docker run --rm pr-cybr-map-agent --version
 ```
 
 ## Contributing

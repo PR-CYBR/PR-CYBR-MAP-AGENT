@@ -1,4 +1,4 @@
-# PR-CYBR Map Agent Development Guide
+# PR-CYBR-MAP-AGENT (A-15) Development Guide
 
 ## Working with the Spec-Kit Framework
 
@@ -154,9 +154,9 @@ describe('Pipeline Configuration', () => {
 
 Build and test locally:
 ```bash
-docker build -t prcyber-map-agent .
-docker run --rm prcyber-map-agent --version
-docker run --rm prcyber-map-agent --status
+docker build -t pr-cybr-map-agent .
+docker run --rm pr-cybr-map-agent --version
+docker run --rm pr-cybr-map-agent --status
 ```
 
 ### Troubleshooting

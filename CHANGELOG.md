@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the PR-CYBR Map Agent project will be documented in this file.
+All notable changes to the PR-CYBR-MAP-AGENT (A-15) project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -102,4 +102,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Non-root Docker user
 - Secrets management via GitHub
 
-[1.0.0]: https://github.com/PR-CYBR/PRCyberMapAgent/releases/tag/v1.0.0
+[1.0.0]: https://github.com/PR-CYBR/PR-CYBR-MAP-AGENT/releases/tag/v1.0.0

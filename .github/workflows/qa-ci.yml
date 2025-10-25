@@ -100,7 +100,7 @@ jobs:
       - name: Build Docker image for QA
         run: |
           if [ -f Dockerfile ]; then
-            docker build -t prcyber-map-agent:qa .
+            docker build -t pr-cybr-map-agent:qa .
           else
             echo "No Dockerfile found"
           fi
@@ -108,7 +108,7 @@ jobs:
       - name: Scan Docker image with Trivy
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'prcyber-map-agent:qa'
+          image-ref: 'pr-cybr-map-agent:qa'
           format: 'table'
           exit-code: '0'
           severity: 'CRITICAL,HIGH'

@@ -153,7 +153,7 @@ jobs:
       - name: Build Docker image
         run: |
           if [ -f Dockerfile ]; then
-            docker build -t prcyber-map-agent:dev .
+            docker build -t pr-cybr-map-agent:dev .
           else
             echo "No Dockerfile found, skipping Docker build"
           fi
@@ -161,7 +161,7 @@ jobs:
       - name: Test Docker image
         run: |
           if [ -f Dockerfile ]; then
-            docker run --rm prcyber-map-agent:dev --version || true
+            docker run --rm pr-cybr-map-agent:dev --version || true
           fi
 
   promote-to-qa:
