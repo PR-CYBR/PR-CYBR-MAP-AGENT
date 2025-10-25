@@ -1,0 +1,102 @@
+name: Staging Branch CI
+
+on:
+  push:
+    branches:
+      - staging
+  workflow_dispatch:
+
+jobs:
+  deploy-staging:
+    name: Deploy to Staging Environment
+    runs-on: ubuntu-latest
+    environment:
+      name: staging
+      url: https://staging.prcyber-map.example.com
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build staging container
+        run: |
+          if [ -f Dockerfile ]; then
+            docker build -t prcyber-map-agent:staging .
+          else
+            echo "No Dockerfile found"
+          fi
+
+      - name: Tag container for staging
+        run: |
+          if [ -f Dockerfile ]; then
+            docker tag prcyber-map-agent:staging prcyber-map-agent:staging-${{ github.sha }}
+          fi
+
+      - name: Staging deployment placeholder
+        run: |
+          echo "Deploying to staging environment..."
+          echo "Container: prcyber-map-agent:staging-${{ github.sha }}"
+          echo "This would typically push to a container registry and update staging deployment"
+
+  smoke-tests:
+    name: Smoke Tests
+    runs-on: ubuntu-latest
+    needs: deploy-staging
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Wait for staging deployment
+        run: |
+          echo "Waiting for staging environment to be ready..."
+          sleep 30
+
+      - name: Run smoke tests
+        run: |
+          echo "Running smoke tests against staging..."
+          # Placeholder for actual smoke tests
+          # curl -f https://staging.prcyber-map.example.com/health || exit 1
+
+  performance-tests:
+    name: Performance Tests
+    runs-on: ubuntu-latest
+    needs: smoke-tests
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run performance tests
+        run: |
+          echo "Running performance tests..."
+          # Placeholder for actual performance testing
+          # Could use tools like k6, Apache Bench, etc.
+
+  promote-to-production:
+    name: Promote to Production
+    runs-on: ubuntu-latest
+    needs: [smoke-tests, performance-tests]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/staging'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create or update production branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git fetch origin
+          
+          if git show-ref --verify --quiet refs/heads/production; then
+            git checkout production
+            git merge --no-ff staging -m "Auto-merge staging to production"
+          else
+            git checkout -b production
+          fi
+          
+          git push origin production || echo "Production branch promotion will be handled manually"
