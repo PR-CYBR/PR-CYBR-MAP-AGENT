@@ -1,0 +1,53 @@
+# Node modules (will be installed in container)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Git
+.git/
+.gitignore
+.github/
+
+# Documentation
+README.md
+CONTRIBUTING.md
+CHANGELOG.md
+docs/
+*.md
+
+# Tests
+tests/
+coverage/
+.coverage
+
+# Development tools
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Build artifacts
+dist/
+build/
+*.log
+
+# CI/CD
+.github/workflows/
+
+# Templates (not needed in production)
+templates/
+
+# Scripts (not needed in production)
+scripts/
+
+# License (keep in image)
+!LICENSE
