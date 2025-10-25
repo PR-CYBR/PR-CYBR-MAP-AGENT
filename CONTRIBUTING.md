@@ -342,7 +342,7 @@ npm run dev
 ### Reporting Vulnerabilities
 
 - **DO NOT** open public issues for security vulnerabilities
-- Email: security@pr-cybr.com
+- Create a private security advisory on GitHub or contact the maintainers directly
 - Include detailed description and reproduction steps
 - Allow time for response before public disclosure
 

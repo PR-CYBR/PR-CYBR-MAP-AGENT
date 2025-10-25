@@ -41,8 +41,12 @@ echo "  ✓ Tests passed"
 # Test agent
 echo ""
 echo "Testing agent..."
-node src/agent/index.js --status > /dev/null
-echo "✓ Agent operational"
+if node src/agent/index.js --status >/dev/null 2>&1; then
+  echo "✓ Agent operational"
+else
+  echo "❌ Agent test failed"
+  exit 1
+fi
 
 # Summary
 echo ""

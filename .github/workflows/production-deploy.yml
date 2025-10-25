@@ -6,6 +6,9 @@ on:
       - production
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   deploy-production:
     name: Deploy to Production
@@ -64,6 +67,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: verify-production
     if: github.event_name == 'push' && github.ref == 'refs/heads/production'
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
