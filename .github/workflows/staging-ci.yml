@@ -26,7 +26,7 @@ jobs:
       - name: Build staging container
         run: |
           if [ -f Dockerfile ]; then
-            docker build -t prcyber-map-agent:staging .
+            docker build -t pr-cybr-map-agent:staging .
           else
             echo "No Dockerfile found"
           fi
@@ -34,13 +34,13 @@ jobs:
       - name: Tag container for staging
         run: |
           if [ -f Dockerfile ]; then
-            docker tag prcyber-map-agent:staging prcyber-map-agent:staging-${{ github.sha }}
+            docker tag pr-cybr-map-agent:staging pr-cybr-map-agent:staging-${{ github.sha }}
           fi
 
       - name: Staging deployment placeholder
         run: |
           echo "Deploying to staging environment..."
-          echo "Container: prcyber-map-agent:staging-${{ github.sha }}"
+          echo "Container: pr-cybr-map-agent:staging-${{ github.sha }}"
           echo "This would typically push to a container registry and update staging deployment"
 
   smoke-tests:

@@ -1,14 +1,14 @@
-# Contributing to PR-CYBR Map Agent
+# Contributing to PR-CYBR-MAP-AGENT
 
-Thank you for your interest in contributing to the PR-CYBR Map Agent! This project follows spec-driven development using the Spec-Kit framework.
+Thank you for your interest in contributing to the PR-CYBR-MAP-AGENT (A-15)! This project follows spec-driven development using the Spec-Kit framework.
 
 ## Getting Started
 
 1. **Fork the repository**
 2. **Clone your fork**
    ```bash
-   git clone https://github.com/YOUR-USERNAME/PRCyberMapAgent.git
-   cd PRCyberMapAgent
+   git clone https://github.com/YOUR-USERNAME/PR-CYBR-MAP-AGENT.git
+   cd PR-CYBR-MAP-AGENT
    ```
 3. **Install dependencies**
    ```bash
@@ -324,8 +324,8 @@ Include:
 
 ```bash
 # Clone repository
-git clone https://github.com/PR-CYBR/PRCyberMapAgent.git
-cd PRCyberMapAgent
+git clone https://github.com/PR-CYBR/PR-CYBR-MAP-AGENT.git
+cd PR-CYBR-MAP-AGENT
 
 # Install dependencies
 npm install
@@ -371,4 +371,4 @@ Be respectful, inclusive, and professional. We're all here to build something gr
 
 ---
 
-**Thank you for contributing to PR-CYBR Map Agent!** 🚀
+**Thank you for contributing to PR-CYBR-MAP-AGENT (A-15)!** 🚀

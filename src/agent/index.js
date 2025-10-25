@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * PR-CYBR Map Agent - Autonomous agent for threat map management
+ * PR-CYBR-MAP-AGENT (A-15) - Autonomous agent for threat map management
  * Orchestrates CI/CD pipeline and map data updates
  */
 
@@ -15,7 +15,8 @@ const __dirname = path.dirname(__filename);
 class MapAgent {
   constructor() {
     this.version = '1.0.0';
-    this.name = 'PR-CYBR Map Agent';
+    this.name = 'PR-CYBR-MAP-AGENT';
+    this.agentId = 'A-15';
     this.status = 'initializing';
   }
 
@@ -119,6 +120,7 @@ class MapAgent {
   getStatus() {
     return {
       name: this.name,
+      agentId: this.agentId,
       version: this.version,
       status: this.status,
       timestamp: new Date().toISOString()

@@ -7,7 +7,8 @@ describe('MapAgent', () => {
     it('should create a new agent instance', () => {
       const agent = new MapAgent();
       assert.ok(agent);
-      assert.strictEqual(agent.name, 'PR-CYBR Map Agent');
+      assert.strictEqual(agent.name, 'PR-CYBR-MAP-AGENT');
+      assert.strictEqual(agent.agentId, 'A-15');
       assert.strictEqual(agent.version, '1.0.0');
     });
 
@@ -23,7 +24,8 @@ describe('MapAgent', () => {
       const status = agent.getStatus();
 
       assert.ok(status);
-      assert.strictEqual(status.name, 'PR-CYBR Map Agent');
+      assert.strictEqual(status.name, 'PR-CYBR-MAP-AGENT');
+      assert.strictEqual(status.agentId, 'A-15');
       assert.strictEqual(status.version, '1.0.0');
       assert.ok(status.timestamp);
     });

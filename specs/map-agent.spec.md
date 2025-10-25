@@ -1,7 +1,7 @@
-# PR-CYBR Map Agent Specification
+# PR-CYBR-MAP-AGENT (A-15) Specification
 
 ## Overview
-The PR-CYBR Map Agent is an autonomous system that manages cyber threat data visualization through a multi-stage CI/CD pipeline, enabling self-updating functionality while maintaining human editability.
+The PR-CYBR-MAP-AGENT (A-15) is an autonomous system that manages cyber threat data visualization through a multi-stage CI/CD pipeline, enabling self-updating functionality while maintaining human editability.
 
 ## User Stories
 

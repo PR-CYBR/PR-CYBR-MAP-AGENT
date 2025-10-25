@@ -1,7 +1,7 @@
 {
-  "name": "prcyber-map-agent",
+  "name": "pr-cybr-map-agent",
   "version": "1.0.0",
-  "description": "Autonomous agent for PR-CYBR threat map visualization and CI/CD orchestration",
+  "description": "Autonomous agent (A-15) for PR-CYBR-MAP-AGENT threat map visualization and CI/CD orchestration",
   "main": "src/agent/index.js",
   "type": "module",
   "scripts": {
